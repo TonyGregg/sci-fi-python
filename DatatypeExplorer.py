@@ -76,9 +76,31 @@ def explore_dictionaries():
     print("x. get ('first') " + x.get('first', 'Not available'))
 
 
+def explore_sets():
+    # sets are un-ordered collection of unique list elements
+    x = set([1, 2, 3, 1, 3, 4, 5, 5, 2, 3, 8])
+    print(x)
+    print(1 in x)
+    print(100 in x)
+
+def explore_file_objects():
+    f = open("myfile", "w")
+    f.write("First line with necessary characters")
+    f.write("Another line")
+    f.close()
+    file = open("myfile", "r")
+    line1 = file.readline()
+    line2 = file.readline()
+    file.close()
+    print(line1)
+    print("''\n" + line2)
+
+
 if __name__ == '__main__':
     explore_basic_types()
     explore_list()
     explore_tuple()
     explore_strings()
     explore_dictionaries()
+    explore_sets()
+    explore_file_objects()
