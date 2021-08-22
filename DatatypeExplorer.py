@@ -60,8 +60,25 @@ def explore_strings():
     print(x)
 
 
+def explore_dictionaries():
+    x = {1: "One", 2: "two"}
+    print(x)
+    x["first"] = "OneOne"
+    print(x)
+    x[("India", "China", "USA")] = ("Delhi", "Beijing", "Washington D.C")
+    print(x)
+    print("Keys :: ")
+    print(list(x.keys()))
+    print("Values")
+    print(list(x.values()))
+
+    print("x. get (1) " + x.get(1, 'Not available'))
+    print("x. get ('first') " + x.get('first', 'Not available'))
+
+
 if __name__ == '__main__':
     explore_basic_types()
     explore_list()
     explore_tuple()
     explore_strings()
+    explore_dictionaries()
