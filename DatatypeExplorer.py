@@ -1,8 +1,11 @@
+import re
+
+
 def explore_basic_types():
     print("Inside basic type explorer")
     x = 2 + 5 * 2 + 5;
     print(x)
-    x = 2 ** 8 # 2 power 8
+    x = 2 ** 8  # 2 power 8
     print(x)
     y = 1000005 ** 3
     print(y)
@@ -35,7 +38,30 @@ def explore_tuple():
     print(z)
 
 
+def explore_strings():
+    s1 = "A String in double quotes can contain 'single quote' characters"
+    print(s1)
+    s2 = 'A String in single quote also can contain "double quote" characters'
+    print(s2)
+    s3 = 'This string has ''\ tab and it ends with new line ''\nDid you get this in a new line?'
+    print(s3)
+    s4 = """This is triple quoted string, and the only
+    String that can have real new lines        and sp      aces? ???"""
+    print(s4)
+    x = "Live and let  \t \tlive"
+    x = x.replace("live", "enjoy")
+    reg_exp = re.compile(r"[\t ]+")
+    y = reg_exp.sub(" ", x)  # prints without the tab
+    print("y = " + y)
+
+    print(x)  # Live and let enjoy
+    # Strings are immutable just like java
+    x = x.split()
+    print(x)
+
+
 if __name__ == '__main__':
     explore_basic_types()
     explore_list()
     explore_tuple()
+    explore_strings()
